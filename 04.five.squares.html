@@ -10,12 +10,13 @@
         function draw() {
           var sketch = document.getElementById('sketch');
           var context = sketch.getContext("2d");
-          context.fillStyle = "#ff0000";
 
-          // context.fillRect(x, y, width, height);
-          context.fillRect(50, 70, 100, 100);
+			    context.fillStyle = "#000000";
 
+          for (var i = 0; i <= 4; i ++) {
+            context.fillRect((i * 25), 20, 20, 20);
 
+          }
         }
     </script>
   </body>
