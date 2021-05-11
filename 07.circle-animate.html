@@ -16,12 +16,12 @@
     var fps = 10;
 
     function main() {
-      var sketch = document.getElementById('sketch');
-      var context = sketch.getContext("2d");
-      circle = {'x':25, 'y': sketch.offsetHeight/2, 'r':25};
-      setInterval(animate,fps);
-
+      sketch = document.getElementById('sketch');
+      context = sketch.getContext("2d");
+      circle = {'x':25, 'y':sketch.offsetHeight/2, 'r':25};
+      setInterval(animate, fps);
     }
+
     function animate() {
       context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
       draw_circle(circle.x, circle.y, circle.r);
@@ -34,7 +34,6 @@
 			context.closePath();
 			context.fill();
     }
-
 
     </script>
   </body>
