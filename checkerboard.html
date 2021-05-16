@@ -6,29 +6,27 @@
   </head>
   <body onload="draw()">
     <canvas id="sketch" width="300" height="300"></canvas>
-      <script>
-  function draw() {
-        var sketch = document.getElementById('sketch');
-        var context = sketch.getContext("2d");
+    <script>
+        function draw() {
+          var sketch = document.getElementById('sketch');
+          var context = sketch.getContext("2d");
 
-        context.fillStyle = "#000000";
-
-        for (var i = 0; i <= 3; i ++) {
-          context.fillRect((i * 25), 20, 20, 20);
-
-          for (var i = 0; i < 3; i++) {
+          for (var i = 0; i <= 8; i++) {
             if (i % 2 == 0) {
             // white SQUARES :
-            context.fillStyle = "#FFFFFF"; //generic white
+            context.fillStyle = "#FFFFFF";
             context.fillRect((i * 25), 20, 20, 20);
-          for (var i = 0; i < 3; i++) {
-            //if (i % 2 == 0) {
-              // black SQUARES :
-              context.fillStyle = "#000000"; //generic black
-              context.fillRect((i * 25), 20, 20, 20);
-            }
-    }
-
+          } else {
+            // black SQUARES :
+            context.fillStyle = "#000000";
+            context.fillRect((i * 25), 20, 20, 20);
+            /*context.beginPath();
+            context.arc((i * 25 + 10), 30, 10, 0, 2 * Math.PI, true);
+            context.closePath();
+            context.fill();*/
+          }
+      }
+  }
     </script>
   </body>
 </html>
